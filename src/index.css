@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  *, ::before, ::after {
+    box-sizing: border-box;
+  }
+  
+  html, body {
+    font-family: 'Be Vietnam Pro', -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow-x: hidden;
+    max-width: 100vw;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  #root {
+    overflow-x: hidden;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+  }
+}
+
+.font-serif-dreamy {
+  font-family: 'Lora', 'Playfair Display', Georgia, serif;
+}
+
+.font-heading-romantic {
+  font-family: 'Playfair Display', 'Lora', Georgia, serif;
+}
+
+.font-handwriting {
+  font-family: 'Patrick Hand', 'Mali', cursive;
+}
+
+.font-cute {
+  font-family: 'Mali', cursive;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(254, 243, 199, 0.3);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(244, 162, 178, 0.5);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(244, 162, 178, 0.8);
+}
+
+/* Floating animation */
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0px) rotate(var(--tw-rotate, 0deg));
+  }
+  50% {
+    transform: translateY(-6px) rotate(var(--tw-rotate, 0deg));
+  }
+}
+
+.animate-gentle-float {
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slow-spin {
+  animation: slow-spin 20s linear infinite;
+}
+
+/* Paper note shadow & texture */
+.paper-texture {
+  background-image: radial-gradient(#f4a2b2 0.75px, transparent 0.75px), radial-gradient(#38bdf8 0.75px, #fdfbf7 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+.dark .paper-texture {
+  background-image: radial-gradient(#f4a2b2 0.75px, transparent 0.75px), radial-gradient(#38bdf8 0.75px, #1e1e2d 0.75px);
+  background-size: 30px 30px;
+  background-position: 0 0, 15px 15px;
+}
+
+/* Stamp effect */
+.postage-stamp {
+  position: relative;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.08));
+}

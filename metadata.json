@@ -1,0 +1,6 @@
+{
+  "name": "better and better - Mellifluous",
+  "description": "Trang blog truyện ngôn tình học đường thanh xuân, lãng mạn mùa hè với hoa anh đào và những lá thư tình bay bay.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
